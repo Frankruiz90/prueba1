@@ -16,6 +16,7 @@
     </p>
     <div class="history__image">
       <img src="../assets/img/foto.svg" class="history__image--foto" />
+      <h1 class="history__image--text">#Developers</h1>
     </div>
     <h1 class="history__title">Contact</h1>
     <p class="history__text">
@@ -38,14 +39,11 @@ export default {};
 
 <style lang="scss" scoped>
 .history {
-  &__container {
-  }
   &__title {
     color: #48484a;
-    font-weight: bold;
-    font-size: 40px;
     line-height: 1.1em;
-
+    font-weight: bold;
+    font-size: 70px;
   }
   &__text {
     font-size: 16px;
@@ -55,13 +53,32 @@ export default {};
   }
   &__image {
     margin-top: 30px;
+    position: relative;
+    // background-image: url("../assets/img/foto.svg");
+    // background-repeat: no-repeat;
+
     &--foto {
       border-radius: 150px 50%;
+    }
+    &--text {
+      color: white;
+      line-height: 1.1em;
+      font-weight: bold;
+      font-size: 70px;
+      position: absolute;
+      top: 25%;
+      left: 15%;
     }
   }
   @media screen and (min-width: 768px) {
     &__text {
       padding: 0 200px;
+    }
+    &__image {
+      &--text {
+        top: 37%;
+        left: 35%;
+      }
     }
   }
 }
