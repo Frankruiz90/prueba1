@@ -3,19 +3,41 @@
     <h1 class="information__title">Form</h1>
     <div class="information__form__container">
       <form action="" class="form" method="post">
-        <label class="form__text" for="" >Nombre *</label>
-        <input class="form__input" type="text" name="" id="" required v-model="name" />
+        <label class="form__text" for="">Nombre *</label>
+        <input
+          class="form__input"
+          type="text"
+          name=""
+          id=""
+          required
+          v-model="name"
+        />
         <label class="form__text" for="">Apellido</label>
         <input class="form__input" type="text" name="" id="" />
-        <label class="form__text" for="" >Correo *</label>
-        <input class="form__input" type="email" name="" id="" required v-model="mail"/>
-        <label class="form__text" for="" >Fecha de Nacimiento *</label>
-        <input class="form__input" type="date" name="" id="" required v-model="date" />
+        <label class="form__text" for="">Correo *</label>
+        <input
+          class="form__input"
+          type="email"
+          name=""
+          id=""
+          required
+          v-model="mail"
+        />
+        <label class="form__text" for="">Fecha de Nacimiento *</label>
+        <input
+          class="form__input"
+          type="date"
+          name=""
+          id=""
+          required
+          v-model="date"
+        />
         <input
           type="checkbox"
           class="form__checkbox--style"
           name=""
-          id="accept" v-model="check"
+          id="accept"
+          v-model="check"
         />
         <label class="form__text form__text--checkbox" for="accept">
           Acepto terminos y condiciones *
@@ -25,7 +47,9 @@
           has roots in a piece of classical Latin literature from 45 BC, making
           it over 2000 years old. Richard McClintock, a Latin
         </label>
-        <button class="form__btn"  :disabled="!name || !mail || !date || !check">Enviar</button>
+        <button class="form__btn" :disabled="!name || !mail || !date || !check">
+          Enviar
+        </button>
       </form>
     </div>
   </div>
@@ -35,12 +59,11 @@
 export default {
   data() {
     return {
-      name: '',
-      mail:'',
-      date:'',
-      check:false
-
-    }
+      name: "",
+      mail: "",
+      date: "",
+      check: false,
+    };
   },
 };
 </script>
@@ -142,7 +165,7 @@ export default {
         font-size: 25px;
         line-height: 1.1em;
         font-weight: bold;
-        color: #48484A;
+        color: #48484a;
       }
     }
   }

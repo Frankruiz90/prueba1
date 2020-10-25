@@ -1,16 +1,11 @@
 <template>
   <div class="heaer_container">
-    <div class="logo-container">
-      <img src="../assets/img/logo.svg" alt="" />
-    </div>
-    <div class="links_container">
-      <a class="link__text" href="">History</a>
-      <a class="link__text" href="">Form</a>
-    </div>
     <div class="title__container">
       <h1 class="title">Welcome to the family</h1>
       <div class="icon__container--down">
-        <img src="../assets/img/iconoAbajo.svg" alt="" />
+        <a href="#history">
+          <img src="../assets/img/iconoAbajo.svg" alt="" />
+        </a>
       </div>
     </div>
   </div>
@@ -28,6 +23,7 @@ export default {};
 }
 .heaer_container {
   padding: 1rem;
+  padding-top: 110px;
   width: 100%;
   height: 400px;
   background: -webkit-linear-gradient(
@@ -36,40 +32,10 @@ export default {};
     rgba(136, 200, 156, 1) 50%,
     rgba(161, 203, 0, 1) 100%
   );
-  // background-repeat: no-repeat, repeat;
-  // background-image: url("../assets/img/pequeno.svg");
 
   position: relative;
   text-align: -webkit-center;
 
-  // background-size: 100%;
-
-  .logo-container {
-    width: 76px;
-    position: relative;
-    margin: 0.5rem;
-  }
-  .links_container {
-    display: none;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    margin: 0.5rem;
-    text-align: right;
-    a {
-      text-decoration: none;
-      &:active {
-        color: #00bcff;
-      }
-    }
-    .link__text {
-      margin: 1rem;
-      color: white;
-      font-size: 40px;
-      line-height: 1.1em;
-      font-weight: bold;
-    }
-  }
   .title__container {
     position: relative;
     display: flex;
@@ -87,16 +53,26 @@ export default {};
     }
   }
   .icon__container--down {
-    // padding-top: 110px;
-    position: absolute;
+    position: relative;
+    margin-top: 20px;
     bottom: 0;
     width: 50px;
+    animation: upAndDown 5s ease-in-out infinite;
+    transition: all 0.5s;
+  }
+  @keyframes upAndDown {
+    0% {
+    }
+    50% {
+      bottom: -50px;
+    }
+    100% {
+      bottom: 0px;
+    }
   }
   @media screen and (min-width: 768px) {
-    // background-image: url("../assets/img/ss.svg");
     background-size: inherit;
     min-height: 600px;
-    // background-size: cover;
     .logo-container {
       position: absolute;
     }
@@ -107,8 +83,16 @@ export default {};
     .title__container {
       height: 100%;
     }
-    .icon__container--down {
-      // padding-top: 210px;
+
+    @keyframes upAndDown {
+      0% {
+      }
+      50% {
+        bottom: -100px;
+      }
+      100% {
+        bottom: 0px;
+      }
     }
   }
 }
