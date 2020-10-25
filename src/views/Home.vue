@@ -3,6 +3,7 @@
     <new-header />
     <history />
     <my-form />
+    <my-footer />
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import NewHeader from '@/components/NewHeader.vue'
 import History from '@/components/History.vue'
 import MyForm from '@/components/MyForm.vue'
+import MyFooter from '@/components/MyFooter.vue'
 
 export default {
   name: 'Home',
   components: {
     NewHeader,
     History,
-    MyForm
+    MyForm,
+    MyFooter
   }
 }
 </script>
