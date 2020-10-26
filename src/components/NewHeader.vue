@@ -32,6 +32,7 @@ export default {};
     rgba(136, 200, 156, 1) 50%,
     rgba(161, 203, 0, 1) 100%
   );
+  clip-path: ellipse(71% 68% at 40% 26%);
 
   position: relative;
   text-align: -webkit-center;
