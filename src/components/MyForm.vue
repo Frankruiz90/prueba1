@@ -72,7 +72,7 @@ export default {
 .information {
   &__container {
     margin-top: 40px;
-    padding: 20px 96px;
+    padding: 40px 96px;
     background: -webkit-linear-gradient(
       left,
       rgba(0, 187, 255, 1) 0%,
@@ -80,12 +80,14 @@ export default {
       rgba(161, 203, 0, 1) 100%
     );
     height: auto;
+    clip-path: ellipse(65% 61% at 50% 62%);
   }
   &__title {
     color: white;
     line-height: 1.1em;
     font-weight: bold;
     font-size: 70px;
+    margin-bottom: 70px;
   }
   &__form__container {
     border: solid 1px white;
